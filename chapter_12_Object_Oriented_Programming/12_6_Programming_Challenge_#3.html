@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>OOP JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <!--<h1 id="heading">Chapter 12. Object-Oriented Programming</h1>-->
+  
+  <!--<img src="../images/car.png" alt="car image">-->
+  
+<script>
+
+var Car = function (x, y, speed) {
+  this.x = x;
+  this.y = y;
+  // #1: Drawing in the Car Constructor:
+  this.draw();
+  // #2: Adding a Speed Property:
+  this.speed = speed;
+};
+
+// Adding a draw Method to the Car Prototype:
+Car.prototype.draw = function () {
+  var carHtml = '<img src="../images/car.png" alt="car image">';
+  
+  this.carElement = $(carHtml);
+  
+  this.carElement.css({
+    position: "absolute",
+    left: this.x,
+    top: this.y
+  });
+  
+  $("body").append(this.carElement);
+};
+
+// Adding a moveRight Method:
+Car.prototype.moveRight = function () {
+  // #2:
+  this.x += this.speed;
+  
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+// Adding a moveLeft Method:
+Car.prototype.moveLeft = function () {
+  // #2:
+  this.x -= this.speed;
+  
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+// Adding moveUp Method:
+Car.prototype.moveUp = function () {
+  // #2:
+  this.y -= this.speed;
+  
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+// Adding moveDown Method:
+Car.prototype.moveDown = function () {
+  // #2:
+  this.y += this.speed;
+  
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+
+var tesla = new Car(20, 20, 30); // #2:
+var nissan = new Car(100, 200, 40); // #2:
+//tesla.draw(); 
+//nissan.draw();
+
+
+
+</script>
+
+</body>
+</html>

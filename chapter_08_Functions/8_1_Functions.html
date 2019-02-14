@@ -1,0 +1,81 @@
+<html>
+<head>
+  <title>JSFK - Functions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 8. Functions</h1>
+  <h2>Something will go here. Probably...</h2>
+  
+<script>
+
+var ourFirstFunction = function () {
+  alert("Hello world!");
+};
+//ourFirstFunction();
+
+var sayHelloTo = function (name = "Nick") {
+  console.log("Hello " + name + "!");
+};
+//sayHelloTo("Atila");
+
+var drawCats = function (howManyTimes) {
+  for (var i = 0; i < howManyTimes; i++) {
+    console.log((i + 1) + " =^.^=");
+  }
+};
+//drawCats(7);
+
+var printMultipleTimes = function (howManyTimes, whatToDraw) {
+  for (var j = 0; j < howManyTimes; j++) {
+    console.log((j + 1) + whatToDraw);
+  }
+};
+//printMultipleTimes(5, " =^.^=");
+
+var double = function (number) {
+  return number * 2;
+};
+//var numb = double(3);
+//console.log(numb);
+
+// Using Function Calls as Values ///
+
+//console.log( double(5) + double(6) );
+//console.log( double(double(3)) );
+
+var pickRandomWord = function (words) {
+  return words[Math.floor(Math.random() * words.length)];
+};
+
+//var randomWords = [
+//  "Planet", "Worm", "Flower", "Computer"
+//];
+//console.log( pickRandomWord(randomWords) );
+
+
+//// RANDOM INSULT GENERATOR ////
+var randomBodyPart = ["Face", "Nose", "Hair"];
+var randomAdjectives = ["Smelly", "Boring", "Stupid"];
+var randomWords = ["Fly", "Marmot", "Stick", "Monkey", "Rat"];
+
+// Join all the random strings into a sentence:
+var randomString = "Your " +
+pickRandomWord(randomBodyPart) + " is like a " +
+pickRandomWord(randomAdjectives) + " " +
+pickRandomWord(randomWords) + "!!!";
+
+//console.log(randomString);
+
+
+
+
+</script>
+
+</body>
+</html>

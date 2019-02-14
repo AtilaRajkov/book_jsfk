@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Playing with the DOM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 9. The DOM and jQuery</h1>
+  <h2>Animating Elements with jQuery</h2>
+  
+  
+<script>
+
+//$("h2").fadeOut(3000);
+//
+//for (var i = 0; i < 10; i++) {
+//  $("h2").fadeIn(3000);
+//  $("h2").fadeOut(3000);
+//}
+
+
+///// Chaining jQuery Animations /////
+
+//$("h1").text("This will fade out").fadeOut(3000);
+
+//$("h1").fadeOut(3000).fadeIn(2000);
+
+//$("h1").slideUp(1000).slideDown(1000);
+
+//for (var i = 0; i < 14; i++) {
+//  $("h1").fadeToggle(500);
+//}
+
+
+///// Try it Out /////
+
+//$("h1").fadeOut(1000);
+//$("h1").fadeIn(1000);
+
+$("h1").hide(1000).show(700);
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Interactive Programming</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 10. Interactive Programming</h1>
+  
+  
+<script>
+
+//function timeUp() {
+//  alert("Time's up!");
+//}
+//
+//setTimeout(timeUp, 2000);
+
+
+//// Canceling a Timeout ////
+var doHomeworkAlarm = function () {
+  alert("Hey! You need to do your homework!");
+};
+
+var timeoutId = setTimeout(doHomeworkAlarm, 2000);
+
+clearTimeout(timeoutId);
+
+
+//// Calling Code Multiple Times with setInterval ////
+var counter = 1;
+var printMessage = function () {
+  console.log("You have been staring at your console for "
+  + counter + " seconds");
+  counter++;
+};
+var intervalId = setInterval(printMessage, 1000);
+
+//clearInterval(intervalId);
+
+var clearIntervalFunction = function () {
+  clearInterval(intervalId);
+};
+setTimeout(clearIntervalFunction, 6000);
+
+
+</script>
+
+</body>
+</html>

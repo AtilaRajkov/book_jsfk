@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Mousemove</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+    div {
+        background: maroon;
+        width: 300px;
+        height: 300px;
+    }
+    p { color: white; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 10. Interactive Programming</h1>
+  <h1 id="heading">Hello world!</h1>
+  <div>
+    <p>This text will move!</p>
+  </div>
+  
+  
+<script>
+//// The mousemove Event ////
+//$("html").mousemove(function (event) {
+//  $("#heading").offset({
+//    left: event.pageX,
+//    top: event.pageY
+//  });
+//});
+
+$("div").mousemove(function (event) {
+  $("p").offset({
+    left: event.pageX,
+    top: event.pageY
+  });
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>The Canvas Element</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body { font-family: Helvetica; }
+    canvas { background-color: beige; }
+  </style>
+</head>
+<body>
+  
+  <canvas id="canvas" width="200" height="200"></canvas>
+  
+<script>
+// Drawing Multiple Squares:
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+for (var i = 0; i < 8; i++) {
+  ctx.fillRect(i * 10, i * 10, 10, 10);
+}
+
+
+
+</script>
+
+</body>
+</html>

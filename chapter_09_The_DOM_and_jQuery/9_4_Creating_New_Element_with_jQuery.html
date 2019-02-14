@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Playing with the DOM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 9. The DOM and jQuery</h1>
+  <!--<h2>Something</h2>-->
+  <h1 id="main-heading">Hello world!</h1>
+  
+  <p id="myId_1"></p>
+  
+<script>
+
+$("body").append("<p>This is a new paragraph</p>");
+
+//$("#myId_1").append("<p>This is my new paragraph!</p>");
+
+for (var i = 0; i < 3; i++) {
+  var hobby = prompt("Tell me one of your hobbies!");
+  $("body").append("<p>" + (i + 1) +". " + hobby + "</p>");
+}
+
+
+</script>
+
+</body>
+</html>

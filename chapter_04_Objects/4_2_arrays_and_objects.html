@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>JSFK - Objects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Objects</h1>
+  <h2>Combining Arrays and Objects</h2>
+  
+<script>
+
+var dinosaurs = [
+  {
+    name: "Tyrannosaurus Rex",
+    period: "Late Cretaceous"
+  },
+    {
+    name: "Stegosaurus",
+    period: "Late Jurassic"
+  },
+    {
+    name: "Plateosaurus",
+    period: "Triassic"
+  }
+];
+console.log(dinosaurs[0]['name']);
+
+// An Array of Friends:
+var anna = { name: "Anna", age: 11, "luckyNumbers": [2, 4, 8, 16] };
+var dave = { name: "Dave", age: 5, "luckyNumbers": [3, 9, 40] };
+var kate = { name: "Kate", age: 9, "luckyNumbers": [1, 2, 3] };
+
+var friends = [anna, dave, kate];
+
+console.log(friends[1].luckyNumbers[0]);
+
+
+
+
+
+</script>
+
+</body>
+</html>

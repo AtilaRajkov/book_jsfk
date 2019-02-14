@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title>JSFK - Adding Arrays</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Adding Arrays</h1>
+<script>
+
+ var furryAnimals = [
+   "Alpaca",
+   "Ring-tailed Lemur",
+   "Yeti"
+ ];
+ var scalyAnimals = [
+   "Boa Constrictor",
+   "Godzilla"
+ ];
+
+var furryAndScalyAnimals = furryAnimals.concat(scalyAnimals);
+
+//console.log(furryAndScalyAnimals);
+
+var featheredAnimals = [
+  "Macaw",
+  "Dodo"
+];
+
+var allAnimals = furryAnimals.concat(scalyAnimals, featheredAnimals);
+//console.log(allAnimals);
+
+var colors = [
+  "red",
+  "green",
+  "blue"
+];
+//console.log(colors.indexOf("blue"));
+
+var boringAnimals = [
+  "Monkey",
+  "Cat",
+  "Fish",
+  "Lizard"
+];
+//console.log(boringAnimals.join(" "));
+
+var myNames = ["Nicholas", "Andrew", "Maxwell", "Morgan"];
+//console.log(myNames.join(" "));
+
+var ages = [11, 14, 19];
+console.log(ages.join(" "));
+
+
+
+</script>
+
+</body>
+</html>

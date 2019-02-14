@@ -1,0 +1,95 @@
+<html>
+<head>
+  <title>OOP JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <!--<h1 id="heading">Chapter 12. Object-Oriented Programming</h1>-->
+  
+  <!--<img src="../images/car.png" alt="car image">-->
+  
+<script>
+
+var Car = function (x, y) {
+  this.x = x;
+  this.y = y;
+};
+
+// Adding a draw Method to the Car Prototype:
+Car.prototype.draw = function () {
+  var carHtml = '<img src="../images/car.png" alt="car image">';
+  
+  this.carElement = $(carHtml);
+  
+  this.carElement.css({
+    position: "absolute",
+    left: this.x,
+    top: this.y
+  });
+  
+  $("body").append(this.carElement);
+};
+
+// Adding a moveRight Method:
+Car.prototype.moveRight = function () {
+  this.x +=5;
+  
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+// Adding a moveLeft Method:
+Car.prototype.moveLeft = function () {
+  this.x -= 5;
+  
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+// Adding moveUp Method:
+Car.prototype.moveUp = function () {
+  this.y -= 5;
+  
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+// Adding moveDown Method:
+Car.prototype.moveDown = function () {
+  this.y += 5;
+  
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+
+
+var tesla = new Car(20, 20);
+var nissan = new Car(100, 200);
+
+tesla.draw();
+nissan.draw();
+
+// TRY IT OUT!
+
+// Atila Hackre xD
+var nisanMoveRight = function () {
+  nissan.moveRight();
+};
+
+//setInterval(nisanMoveRight, 50);
+
+</script>
+
+</body>
+</html>

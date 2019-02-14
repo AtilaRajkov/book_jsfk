@@ -1,0 +1,73 @@
+<html>
+<head>
+  <title>JSFK - Control Structures</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 6. Programming Challenges</h1>
+  
+<script>
+
+// #1: AWESOME ANIMALS
+ 
+//var animals = [
+//  "Cat",
+//  "Fish",
+//  "Lemur",
+//  "Komodo Dragon"
+//];
+//for (var i = 0; i < animals.length; i++) {
+//  animals[i] = "Awesome " + animals[i];
+//}
+//console.log(animals);
+
+
+// #2: RANDOM STRING GENERATOR
+
+//var alphabet = "abcdefghijklmnopqrstuvwxyz";
+//var stringLength = 0;
+//var randomString = "";
+//while (stringLength < 6) {
+//  var random = Math.floor(Math.random() * alphabet.length);
+//  randomString+=alphabet[random];
+//  stringLength++;
+//}
+//console.log(randomString);
+
+
+// #3: H4CK3R SP34K
+
+var input = "javascript is awesome";
+var output = "";
+
+for (var i = 0; i < input.length; i++) {
+  switch (input[i]) {
+    case "a":
+      output += "4";  
+      break;
+    case "e":
+      output += "3";  
+      break;
+    case "i":
+      output += "1";  
+      break;
+    case "o":
+      output += "0";  
+      break;
+    default:
+      output += input[i]; 
+      break;
+  }
+}
+console.log(output);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>The Canvas Element</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body { font-family: Helvetica; }
+    canvas { background-color: beige; }
+  </style>
+</head>
+<body>
+  
+  <canvas id="canvas" width="200" height="200"></canvas>
+  
+<script>
+// Drawing Rectangle Outlines
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.strokeStyle = "DeepPink";
+ctx.lineWidth = 4;
+ctx.strokeRect(10, 10, 100, 20);
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>The Canvas Element</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body { font-family: Helvetica; }
+    canvas { background-color: white; }
+  </style>
+</head>
+<body>
+  
+  <canvas id="canvas" width="600" height="600"></canvas>
+  
+<script>
+// #1: A Snowman-Drawing Function:
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var circle = function (x, y, radius, lineWidth, color = "Black", fillCircle = false) {
+  ctx.lineWidth = lineWidth;
+  ctx.beginPath();
+  ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+  if (fillCircle) {
+    ctx.fillStyle = color;
+    ctx.fill();
+  } else {
+    ctx.strokeStyle = color;
+    ctx.stroke();
+  }
+};
+
+var drawASnowman = function (x, y) {
+  
+  // Head
+  circle(x + 25, y + 25, 25, 4);
+  // Eyes
+  circle(x + 16, y + 19, 4, 1, "Black", true);
+  circle(x + 32, y + 19, 4, 1, "Black", true);
+  // Nose
+  circle(x + 25, y + 28, 4, 1, "Gold", true);
+  // Body
+  circle(x + 25, y + 25 + 60, 35, 4);
+  // Buttons
+  circle(x + 25, y + 70, 4, 1, "Black", true);
+  circle(x + 25, y + 85, 4, 1, "Black", true);
+  circle(x + 25, y + 100, 4, 1, "Black", true);
+  
+  
+};
+
+drawASnowman(50, 50);
+drawASnowman(150, 150);
+drawASnowman(250, 50);
+
+
+
+</script>
+
+</body>
+</html>

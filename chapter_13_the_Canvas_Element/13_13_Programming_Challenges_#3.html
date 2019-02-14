@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>The Canvas Element</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body { font-family: Helvetica; }
+    canvas { background-color: beige; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="200" height="200"></canvas>
+<script>
+// #3: Painting with Your Mouse:
+// Using jQuery and the mousemove event, draw a filled circle with a 
+// radius of 3 pixels at the mouse
+// position whenever you move your mouse over the canvas. Because 
+// this event is triggered by every tiny
+// movement of the mouse, these circles will join into a line as you 
+// move the mouse over the canvas.
+// Hint: Refer to Chapter 10 for a reminder of how to respond to 
+// mousemove events.
+
+
+$("#canvas").mousemove(function (event) {
+  
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "SkyBlue";
+  ctx.beginPath();
+  ctx.arc(event.pageX, event.pageY, 3, 0, Math.PI * 2, false);
+  ctx.fill();
+  
+});
+
+
+
+</script>
+
+</body>
+</html>

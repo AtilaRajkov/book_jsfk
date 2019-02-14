@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>JSFK - Objects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Objects</h1>
+  <h2>Useful Things to Do with Objects</h2>
+  
+<script>
+
+// BANK
+
+var owedMoney = {};
+owedMoney.Jimmy = 5;
+owedMoney.Anna = 7;
+
+//console.log(owedMoney.Jinen);
+
+owedMoney.Jimmy += 3;
+
+//console.log(owedMoney.Jimmy);
+//console.log(owedMoney);
+
+// MOVIES
+
+var movies = {
+  "Finding Nemo": {
+    releaseDate: 2003,
+    duration: 100,
+    actors: ["Albert Brooks", "Ellen DeGenerese", "Alexander Gould"],
+    format: "DVD"
+  },
+  "Star Wars: Episode VI - Return of the Jedi": {
+    releaseDate: 1983,
+    duration: 134,
+    actors: ["Mark Hamill", "Harrison Ford", "Carrie Fisher"],
+    format: "DVD"
+  },
+  "Harry Potter and the Goblet of Fire": {
+    releaseDate: 2005,
+    duration: 157,
+    actors: ["Daniel Radcliffe", "Emma Watson", "Rupert Grint"],
+    format: "Blu-ray"
+  }
+};
+
+var cars = {
+  releaseDate: 2006,
+  duration: 117,
+  actors: ["Owen Wilson", "Bonnie Hunt", "Paul Newman"],
+  format: "DVD"
+};
+
+movies.Cars = cars;
+
+console.log(Object.keys(movies));
+
+var myArray = [];
+myArray['a'] = "First item";
+myArray['b'] = "Second item";
+
+console.log(myArray);
+
+
+</script>
+
+</body>
+</html>

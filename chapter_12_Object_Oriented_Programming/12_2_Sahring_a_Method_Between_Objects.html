@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>OOP JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1 id="heading">Chapter 12. Object-Oriented Programming</h1>
+  
+<script>
+
+var speak= function () {
+  console.log(this.sound + "! My name is " + this.name + "!");
+};
+
+var cat = {
+  sound: "Miaow",
+  name: "Mittens",
+  speak: speak
+};
+cat.speak();
+
+var pig = {
+  sound: "Oink",
+  name: "Charlie",
+  speak: speak
+};
+
+var horse = {
+  sound: "Neigh",
+  name: "Marie",
+  speak: speak
+};
+
+pig.speak();
+horse.speak();
+
+</script>
+
+</body>
+</html>

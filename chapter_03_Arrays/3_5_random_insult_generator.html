@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>JSFK - Random Insult Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+    span {font-weight: bold; color: maroon; };
+  </style>
+</head>
+<body>
+  <h1>Arrays - Random Insult Generator</h1>
+  
+  <p>Random insult: <span id="insultId"></span></p>
+  
+  <button id="buttonId">Generate</button>
+  
+<script>
+
+  function randomInsultGenerator() {
+    
+    var randomBodyParts = ["Face", "Nose", "Hair"];
+    var randomAdjectives = ["Smelly", "Boring", "Stupid"];
+    var randomWords = ["Fly", "Marmot", "Stick", "Monkey", "Rat"];
+    
+    var randomBodyPart = randomBodyParts[Math.floor(Math.random() * randomBodyParts.length)];
+    var randomAdjective = randomAdjectives[Math.floor(Math.random() * randomAdjectives.length)];
+    var randomWord = randomWords[Math.floor(Math.random() * randomWords.length)];
+    
+    var randomInsult = [
+      "Your", 
+      randomBodyPart,
+      "is",
+      "like",
+      "a",
+      randomAdjective,
+      randomWord + "!!!"
+    ].join(" ");
+    
+    $("#insultId").html(randomInsult);
+    
+  }
+  
+  $("#buttonId").click(function() {
+    randomInsultGenerator();
+  });
+
+</script>
+
+</body>
+</html>

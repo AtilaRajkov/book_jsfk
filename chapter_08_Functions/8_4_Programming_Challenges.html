@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>JSFK - Functions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 8. Functions</h1>
+  <h2>Programming Challenges</h2>
+  
+<script>
+
+// #1: Doing Arithmetic with Functions
+
+function add(x, y) {
+  return x + y;
+};
+
+function multiply(x, y) {
+  return x * y;
+};
+//console.log( add(multiply(36325, 9824), 777) );
+
+
+// #2: Are these Arrays the Same?
+
+function areArraysSame(firstArray, secondArray) {
+  if (firstArray.length !== secondArray.length) {
+    return false;
+  }
+  for (var i = 0; i < firstArray.length; i++) {
+    if (firstArray[i] !== secondArray[i]) {
+      return false;
+    }
+  }
+  
+  return true;
+};
+
+console.log( areArraysSame([1, 2, 3], [4, 5, 6]) );
+console.log( areArraysSame([1, 2, 3], [1, 2, 3]) );
+console.log( areArraysSame([1, 2, 3], [1, 2, 3, 4]) );
+
+
+
+</script>
+
+</body>
+</html>

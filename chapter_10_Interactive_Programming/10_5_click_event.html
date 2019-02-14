@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Interactive Programming</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 10. Interactive Programming</h1>
+  <h1 id="heading">Hello world!</h1>
+ 
+  
+<script>
+
+//// Responding to User Action ////
+var clickHandler = function (event) {
+  console.log("Click! " + event.pageX + " " + event.pageY);
+};
+$("#heading").click(clickHandler);
+
+//$("#heading").click(function (event) {
+//  console.log("Click! " + event.pageX + " " + event.pageY);
+//});
+
+
+
+
+</script>
+
+</body>
+</html>

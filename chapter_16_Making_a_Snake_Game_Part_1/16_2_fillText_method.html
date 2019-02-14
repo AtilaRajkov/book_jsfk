@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>Ch 16 - fillText</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body { font-family: Helvetica; }
+    canvas { background-color: beige; }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="400" height="400"></canvas>
+<script>
+// Defining the canvas, ctx, width, and height Variables
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var width = canvas.width;
+var height = canvas.height;
+
+// Displaying the Score
+//ctx.fillText("Hello world", 50, 50);
+
+// Setting the Text Baseline
+ctx.textBaseline = "top";
+//ctx.textAlign = "right";
+//ctx.fillText("Hello world!", 50, 50);
+
+// Setting the Size and Font
+ctx.font = "20px Courier";
+ctx.fillText("Courier", 50, 50);
+
+ctx.font = "24px Comic Sans Ms";
+ctx.fillText("Comic Sans", 50, 100);
+
+ctx.font = "28px Arial";
+ctx.fillText("Arial", 50, 150);
+
+
+</script>
+</body>
+</html>

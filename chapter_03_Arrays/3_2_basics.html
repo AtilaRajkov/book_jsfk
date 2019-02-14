@@ -1,0 +1,81 @@
+<html>
+<head>
+  <title>JSFK - Arrays</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Arrays</h1>
+<script>
+
+ var dinosaurs = [
+        "T-Rex",
+        "Velociraptor",
+        "Stegosaurus",
+        "Triceratops",
+        "Brachiosaurus",
+        "Pteranodon",
+        "Apatosaurus",
+        "Diplodocus",
+        "Compsognathus"
+ ];
+ 
+// dinosaurs.push("Pachycephalosaurus");
+ 
+//console.log(dinosaurs[0]);
+
+dinosaurs[0] = "Tyrannosaurus Rex";
+
+//console.log(dinosaurs);
+
+var dinosaursAndNumbers = [
+  3,
+  "dinosaurs",
+  ['Triceratops', 'Stegosaurus', 3627.5],
+  10
+];
+
+//console.log(dinosaursAndNumbers[2][0]);
+
+var length = dinosaurs.length;
+
+console.log(length);
+
+
+dinosaurs.push("Pachycephalosaurus");
+
+//console.log(dinosaurs);
+
+dinosaurs.unshift("Parasaurolophus");
+
+//console.log(dinosaurs);
+
+
+// REMOVING ELEMENTS FROM AN ARRAY //
+
+var animals = [
+  "Polar Bear", 
+  "Monkey", 
+  "Cat", 
+  "Dog", 
+  "Llama"
+];
+
+var lastAnimal = animals.pop();
+animals.pop();
+
+animals.unshift(lastAnimal);
+
+console.log(animals);
+
+
+
+
+
+</script>
+
+</body>
+</html>

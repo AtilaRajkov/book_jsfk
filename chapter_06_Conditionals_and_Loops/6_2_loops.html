@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>JSFK - Control Structures</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 6. Loops</h1>
+  <h2>Hello world!</h2>
+  <p>My first web page.</p>
+  
+<script>
+  
+//var  = 0;
+//while (sheepCounted < 10) {
+//    console.log("I have counted " + sheepCounted + " sheep!");
+//    sheepCounted++;
+//}
+//console.log("Zzzzzzzzzzz");
+
+//for (var sheepCounted = 0; sheepCounted < 10; sheepCounted++) {
+//  console.log("I have counted " + sheepCounted + " sheep!");
+//}
+//console.log("Zzzzzzzzzzz");
+
+var animals = [
+  "Lion",
+  "Flamingo",
+  "Polar Bear",
+  "Boa Constrictor"
+];
+for (var i = 0; i < animals.length; i++) {
+  console.log("This zoo contains a " + animals[i] + '.');
+}
+
+var name = "Nick";
+for (var i = 0; i < name.length; i++) {
+  console.log("My name contains the letter " + name[i] + ".");
+}
+
+for (var x = 2; x < 10000; x = x * 2) {
+  console.log(x);
+}
+
+var y = 3;
+while (y < 10000) {
+  console.log(y);
+  y *= 3;
+}
+
+
+
+
+</script>
+
+</body>
+</html>

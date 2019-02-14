@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>OOP JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <!--<h1 id="heading">Chapter 12. Object-Oriented Programming</h1>-->
+  
+  <!--<img src="../images/car.png" alt="car image">-->
+  
+<script>
+
+// Creating Object Using Constructors:
+var Car = function (x, y) {
+  this.x = x;
+  this.y = y;
+};
+
+// Calling the Car Constructor:
+var beetle = new Car(10, 20);
+
+// Drawing the Car:
+var drawCar = function (car) {
+  var carHtml = '<img src="../images/car.png" alt="car image">';
+  
+  var carElement = $(carHtml);
+  
+  carElement.css({
+    position: "absolute",
+    left: car.x,
+    top: car.y
+  });
+  
+  $("body").append(carElement);
+};
+
+// Testing the drawCar Function
+var telsa = new Car(20, 20);
+var nissan = new Car(100, 200);
+
+drawCar(telsa);
+drawCar(nissan);
+
+
+</script>
+
+</body>
+</html>

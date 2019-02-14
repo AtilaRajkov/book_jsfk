@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>JSFK - Decision Maker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Arrays - Decision Maker</h1>
+  <div>
+    <p>Should I have another milkshake?</p>
+    <p id="answerId"></p>
+  </div>
+  <button id="buttonId">Answer</button>
+<script>
+
+//var phrases = [
+//  "1. That sounds good",
+//  "2. Yes, you should definitely do that",
+//  "3. I'm not surethat is a great idea",
+//  "4. Maybe not today",
+//  "5. Computer says no."
+//];
+
+// Should I have another milkshake?
+//console.log(phrases[Math.floor(Math.random() * phrases.length)]);
+
+function magic8Ball() {
+  
+  var answerString = "";
+  var randomNumber = 0;
+  var phrases = [
+    "1. That sounds good",
+    "2. Yes, you should definitely do that",
+    "3. I'm not surethat is a great idea",
+    "4. Maybe not today",
+    "5. Computer says no."
+  ];
+  
+  randomNumber = Math.floor(Math.random() * phrases.length);
+  
+  answerString = phrases[randomNumber];
+  
+  $("#answerId").html(answerString);
+  
+};
+
+$("#buttonId").click(function () {
+  magic8Ball();
+});
+
+</script>
+
+</body>
+</html>

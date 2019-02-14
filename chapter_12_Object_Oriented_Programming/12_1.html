@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>OOP JavaScript</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1 id="heading">Chapter 12. Object-Oriented Programming</h1>
+  
+<script>
+
+var dog = {
+  name: "Pancake",
+  laegs: 4,
+  isAwesome: true
+};
+
+console.log( dog.name );
+
+dog.age = 6;
+
+console.log( dog );
+
+// Adding Methods to Objects
+dog.bark = function () {
+  console.log("Woof woof! My name is " + this.name + "!");
+};
+dog.bark();
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>Playing with the DOM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+  </style>
+</head>
+<body>
+  <h1>Chapter 9. The DOM and jQuery</h1>
+  <h2 id="flash">Heading that Flashes 0.0</h2>
+  <h2 id="delay">This is the Delayed element</h2>
+  <h2 id="fadeTo">This element will fade to something...</h2>
+  
+<script>
+
+// #1: Listing your friends with jQuery (and making them smell!)
+var myFriends = ["Blagoje", "Aca", "Emil", "Dani", "Ivan", "Endre"];
+
+$("h1").text("My friends");
+
+for (var i = 0; i < myFriends.length; i++) {
+  $("body").append("<p id='" + i + "'>" + myFriends[i] + "</p>");
+//  $("#" + i).hide();
+//  $("#" + i).show(500);
+}
+
+$("p").append(" smells!");
+
+
+// #2: Making heading Flash
+//for (var j = 0; j < 5; j++) {
+//  $("#flash").fadeOut((j + 1) * 300).fadeIn((j + 1) * 300);
+//}
+
+
+// #3: Delaying Animations
+//$("#delay").fadeOut(500).delay(3000).fadeIn(500);
+
+
+// #4: Using fadeTo
+$("#fadeTo").fadeTo(2000, 0.3);
+
+</script>
+
+</body>
+</html>

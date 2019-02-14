@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>Mousemove</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <script src="../jQuery/jquery.min.js"></script>
+  <style>
+    body {font-family: Helvetica; }
+    #heading { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h3 id="heading">Clicked:</h3>
+  
+<script>
+// #1: Follow the Clicks
+//$("html").click(function (event) {
+//  $("#heading").offset({
+//    left: event.pageX,
+//    top: event.pageY
+//  });
+//});
+
+
+// #2: Creatre Your Own Animation
+var leftOffset = 0;
+var topOffset = 0;
+var direction = "right";
+var moveHeading = function () {
+  if (direction === "right") {
+    $("#heading").offset({ left: leftOffset });
+    leftOffset++;
+    if (leftOffset > 200) {
+      direction = "down";
+    }
+  }
+  if (direction === "down") {
+    $("#heading").offset({ top: topOffset });
+    topOffset++;
+    if (topOffset > 200) {
+      direction = "left";
+    }
+  }
+  if (direction === "left") {
+    $("#heading").offset({ left: leftOffset });
+    leftOffset--;
+    if (leftOffset < 0) {
+      direction = "up";
+    }
+  }
+  if (direction === "up") {
+    $("#heading").offset({ top: topOffset });
+    topOffset--;
+    if (topOffset < 0) {
+      direction = "right";
+    }
+  }
+};
+var moveHeadingId = setInterval(moveHeading, 31);
+
+// #3: Cancel an Animation with a Click
+//var theSwitch = true;
+//$("html").click(function () {
+//  if (theSwitch) {
+//    clearInterval(moveHeadingId);
+//    theSwitch = false;
+//  } else {
+//    moveHeadingId = setInterval(moveHeading, 3);
+//    theSwitch = true;
+//  }
+//});
+
+// #4: Make a "CLICK THE HEADER" Game!
+var numberOfClicks = 0;
+var speed = 31;
+$("#heading").click(function () {
+  clearInterval(moveHeadingId);
+  numberOfClicks++;
+  speed -= 3;
+  console.log("number of clicks: " + numberOfClicks);
+  console.log("speed: " + speed);
+  $("#heading").text("Clicked: " + numberOfClicks);
+  moveHeadingId = setInterval(moveHeading, speed);
+  if (numberOfClicks > 10) {
+    clearInterval(moveHeadingId);
+    $("#heading").text("You Won!");
+  }
+});
+
+</script>
+
+</body>
+</html>
